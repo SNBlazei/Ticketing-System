@@ -5,13 +5,15 @@ public class TicketingSystem {
     private  int ticketReleaseRate;
     private  int customerRetrievalRate;
     private  int maxTicketCapacity;
+    private  int currentTickets;
     private boolean running=false;
 
-    public TicketingSystem(int totalTickets, int ticketReleaseRate, int customerRetrievalRate, int maxTicketCapacity) {
+    public TicketingSystem(int totalTickets, int ticketReleaseRate, int customerRetrievalRate, int maxTicketCapacity,int currentTickets) {
         this.totalTickets = totalTickets;
         this.ticketReleaseRate = ticketReleaseRate;
         this.customerRetrievalRate = customerRetrievalRate;
         this.maxTicketCapacity = maxTicketCapacity;
+        this.currentTickets = currentTickets;
 
     }
 
@@ -30,6 +32,14 @@ public class TicketingSystem {
         return maxTicketCapacity;
     }
 
+    public synchronized int getCurrentTickets() {
+
+        return currentTickets;
+    }
+    public  boolean isRunning() {
+        return running;
+    }
+
     public void setTotalTickets(int totalTickets) {
         this.totalTickets = totalTickets;
     }
@@ -41,6 +51,14 @@ public class TicketingSystem {
     }
     public void setMaxTicketCapacity(int maxTicketCapacity) {
         this.maxTicketCapacity = maxTicketCapacity;
+    }
+    public void setCurrentTickets(int currentTickets) {
+        if (currentTickets<0){
+            System.out.println("Invalid ");
+            return;
+        }
+
+        this.currentTickets = currentTickets;
     }
 
     public void  configure(Scanner scanner) {
@@ -135,6 +153,42 @@ public class TicketingSystem {
         }
         running=false;
         System.out.println("System stopped");
+    }
+
+    public synchronized void addTickets(int tickets){
+        if(!running){
+            System.out.println("System is not running.Try again later");
+            return;
+
+        }
+        if(getCurrentTickets()+tickets>maxTicketCapacity){
+            System.out.println("Ticket limit exceeded");
+        }else{
+            setCurrentTickets(getCurrentTickets()+tickets);
+            logTransactions("Added " + tickets + " tickets");
+            showCurrentTickets();
+
+        }
+    }
+
+    public synchronized void removeTickets(int tickets){
+        if(!running){
+            System.out.println("System is not running.Try again later");
+            return;
+        }
+        if(getCurrentTickets()-tickets<0){
+            System.out.println("Ticket limit exceeded");
+        }else{
+            setCurrentTickets(getCurrentTickets()-tickets);
+            logTransactions("Removed" + tickets + " tickets");
+        }
+    }
+    public synchronized void showCurrentTickets(){
+        System.out.println("Current tickets: " + getCurrentTickets());
+
+    }
+    private void logTransactions(String massage){
+        System.out.println("LOG:" +massage+ "|currentTickets: "+getCurrentTickets());
     }
 
 }
