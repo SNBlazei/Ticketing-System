@@ -43,8 +43,9 @@ public class TicketingSystem {
         this.maxTicketCapacity = maxTicketCapacity;
     }
 
-    public void  configure(){
-        Scanner scanner=new Scanner(System.in);
+    public void  configure(Scanner scanner) {
+
+
 
         while (true){
             System.out.println("Enter the total number of tickets");

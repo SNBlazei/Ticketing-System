@@ -6,7 +6,7 @@ public class Main {
         TicketingSystem ticketingSystem=new TicketingSystem(0,0,0,0);
 
 
-        ticketingSystem.configure();
+        ticketingSystem.configure(scanner);
 
         while (true){
             System.out.println("Enter order (1:Start,2:Stop)");
@@ -34,6 +34,9 @@ public class Main {
             }
 
         }
+
+
+
 
 
 
