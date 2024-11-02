@@ -5,6 +5,7 @@ public class TicketingSystem {
     private  int ticketReleaseRate;
     private  int customerRetrievalRate;
     private  int maxTicketCapacity;
+    private boolean running=false;
 
     public TicketingSystem(int totalTickets, int ticketReleaseRate, int customerRetrievalRate, int maxTicketCapacity) {
         this.totalTickets = totalTickets;
@@ -44,13 +45,95 @@ public class TicketingSystem {
 
     public void  configure(){
         Scanner scanner=new Scanner(System.in);
-        System.out.println("Enter the total number of tickets");
-        int total=scanner.nextInt();
-        System.out.println("Enter the ticket release rate");
-        int rate=scanner.nextInt();
-        System.out.println("Enter the customer retrieval rate");
-        int rate1=scanner.nextInt();
-        System.out.println("Enter the max capacity");
-        int capacity=scanner.nextInt();
+
+        while (true){
+            System.out.println("Enter the total number of tickets");
+            if(scanner.hasNextInt()) {
+                totalTickets = scanner.nextInt();
+
+                if (totalTickets > 0) {
+
+                    break;
+                } else {
+                    System.out.println("value must be positive integer");
+                }
+            }else{
+                System.out.println("Invalid input");
+                scanner.next();
+            }
+        }
+
+
+        while (true){
+            System.out.println("Enter the ticket release rate");
+            if(scanner.hasNextInt()) {
+                ticketReleaseRate = scanner.nextInt();
+
+                if (ticketReleaseRate > 0) {
+                    break;
+                }else {
+                    System.out.println("value must be positive integer");
+                }
+            }else {
+                System.out.println("Invalid input");
+                scanner.next();
+            }
+        }
+
+        while (true){
+            System.out.println("Enter the customer retrieval");
+            if(scanner.hasNextInt()) {
+                customerRetrievalRate = scanner.nextInt();
+
+                if (customerRetrievalRate > 0) {
+                    break;
+                }else {
+                    System.out.println("value must be positive integer");
+                }
+            }else {
+                System.out.println("Invalid input");
+                scanner.next();
+            }
+        }
+
+        while (true){
+            System.out.println("Enter the max ticket capacity");
+            if(scanner.hasNextInt()) {
+                maxTicketCapacity = scanner.nextInt();
+                if (maxTicketCapacity > 0) {
+                    break;
+                }else{
+                    System.out.println("value must be positive integer");
+                }
+            }else {
+                System.out.println("Invalid input");
+                scanner.next();
+            }
+        }
+
+        System.out.println("Total number of tickets: " + totalTickets);
+        System.out.println("Ticket release rate: " + ticketReleaseRate);
+        System.out.println("Customer retrieval: " + customerRetrievalRate);
+        System.out.println("Max ticket capacity: " + maxTicketCapacity);
+
     }
+
+    public void startSystem(){
+        if(running){
+            System.out.println("System is already running");
+            return;
+        }
+        running=true;
+        System.out.println("System started");
+    }
+
+    public void stopSystem(){
+        if(!running){
+            System.out.println("System is already stopped");
+            return;
+        }
+        running=false;
+        System.out.println("System stopped");
+    }
+
 }
