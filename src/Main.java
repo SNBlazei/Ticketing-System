@@ -9,7 +9,7 @@ public class Main {
         ticketingSystem.configure(scanner);
 
         while (true){
-            System.out.println("Enter order (1:Start,2:Stop,3:Exit):)");
+            System.out.println("Enter order (1:Start,2:Stop,3:Exit):");
 
             if(scanner.hasNextInt()) {
                 int order = scanner.nextInt();
@@ -62,17 +62,17 @@ public class Main {
                     System.out.println("Enter the amount of tickets to add");
                     int amount = scanner.nextInt();
                     ticketingSystem.addTickets(amount);
-                    continue;
+                    break;
                 }else if(operation == 2) {
                     System.out.println("Enter the amount of tickets to remove");
                     int amountToRemove = scanner.nextInt();
                     ticketingSystem.removeTickets(amountToRemove);
-                    continue;
+                    break;
 
 
                 }else if(operation == 3) {
                     ticketingSystem.showCurrentTickets();
-                    continue;
+                    break;
                 }else if(operation == 4) {
                     ticketingSystem.stopSystem();
                     break;
