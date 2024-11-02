@@ -9,7 +9,7 @@ public class Main {
         ticketingSystem.configure(scanner);
 
         while (true){
-            System.out.println("Enter order (1:Start,2:Stop)");
+            System.out.println("Enter order (1:Start,2:Stop,3:Exit):)");
 
             if(scanner.hasNextInt()) {
                 int order = scanner.nextInt();
@@ -24,6 +24,11 @@ public class Main {
                     case 2:
                         ticketingSystem.stopSystem();
                         break;
+                    case 3:
+                        ticketingSystem.stopSystem();
+                        System.out.println("System Closed");
+                        scanner.close();
+                        return;
                     default:
                         System.out.println("Invalid order");
 
