@@ -6,7 +6,16 @@ public class Main {
         TicketingSystem ticketingSystem=new TicketingSystem(0,0,0,0,0);
 
 
+
         ticketingSystem.configure(scanner);
+
+        Vendor vendor=new Vendor(ticketingSystem,0,0);
+        Thread t1=new Thread(vendor);
+        Customer customer=new Customer(ticketingSystem,0,0);
+        Thread t2=new Thread(customer);
+        t1.start();
+        t2.start();
+
 
         while (true){
             System.out.println("Enter order (1:Start,2:Stop,3:Exit):");
@@ -57,7 +66,7 @@ public class Main {
 
             if(scanner.hasNextInt()) {
                 int operation = scanner.nextInt();
-
+            try {
                 if(operation == 1) {
                     System.out.println("Enter the amount of tickets to add");
                     int amount = scanner.nextInt();
@@ -77,6 +86,11 @@ public class Main {
                     ticketingSystem.stopSystem();
                     break;
                 }
+
+            }catch (InterruptedException e) {
+                System.out.println("Error");
+            }
+
 
             }else{
                 System.out.println("Invalid input");

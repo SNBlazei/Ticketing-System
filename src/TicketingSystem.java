@@ -155,32 +155,41 @@ public class TicketingSystem {
         System.out.println("System stopped");
     }
 
-    public synchronized void addTickets(int tickets){
+    public synchronized void addTickets(int tickets) throws InterruptedException {
         if(!running){
             System.out.println("System is not running.Try again later");
             return;
 
         }
-        if(getCurrentTickets()+tickets>maxTicketCapacity){
-            System.out.println("Ticket limit exceeded");
-        }else{
+        while (getCurrentTickets()+tickets>maxTicketCapacity){
+            System.out.println("Maximum number of tickets exceeded.Wait ");
+            wait();
+
+        }
+        {
+
             setCurrentTickets(getCurrentTickets()+tickets);
             logTransactions("Added " + tickets + " tickets");
             showCurrentTickets();
+            notifyAll();
 
         }
     }
 
-    public synchronized void removeTickets(int tickets){
+    public synchronized void removeTickets(int tickets) throws InterruptedException {
         if(!running){
             System.out.println("System is not running.Try again later");
             return;
         }
-        if(getCurrentTickets()-tickets<0){
-            System.out.println("Ticket limit exceeded");
-        }else{
+        while (getCurrentTickets()-tickets<=0){
+            System.out.println("Not enough to remove.Wait ");
+            wait();
+        }
+        {
             setCurrentTickets(getCurrentTickets()-tickets);
             logTransactions("Removed" + tickets + " tickets");
+            showCurrentTickets();
+            notifyAll();
         }
     }
     public synchronized void showCurrentTickets(){
