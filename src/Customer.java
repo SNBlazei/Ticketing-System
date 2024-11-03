@@ -1,11 +1,11 @@
 public class Customer implements Runnable {
 
-    private final TicketingSystem ticketingSystem;
+    private final TicketPool TicketPool;
     private final int customerRetrievalRate;
     private final int ticketsToBuy;
 
-    public Customer(TicketingSystem ticketingSystem, int customerRetrievalRate, int ticketsToBuy) {
-            this.ticketingSystem = ticketingSystem;
+    public Customer(TicketPool TicketPool, int customerRetrievalRate, int ticketsToBuy) {
+            this.TicketPool = TicketPool;
             this.customerRetrievalRate = customerRetrievalRate;
             this.ticketsToBuy = ticketsToBuy;
 
@@ -14,10 +14,10 @@ public class Customer implements Runnable {
 
     @Override
     public void run() {
-        while (ticketingSystem.isRunning()) {
+        while (TicketPool.isRunning()) {
 
             try {
-                ticketingSystem.removeTickets(ticketsToBuy);
+                TicketPool.removeTickets(ticketsToBuy);
                 Thread.sleep(customerRetrievalRate);
             }catch (InterruptedException e) {
                 System.out.println("Error while removing tickets");

@@ -1,11 +1,11 @@
 public class Vendor implements Runnable {
 
-    private final TicketingSystem ticketingSystem;
+    private final TicketPool TicketPool;
     private final int producingTickets;
     private final int ticketReleaseRate;
 
-    public Vendor(TicketingSystem ticketingSystem,int producingTickets,int ticketReleaseRate) {
-        this.ticketingSystem = ticketingSystem;
+    public Vendor(TicketPool TicketPool,int producingTickets,int ticketReleaseRate) {
+        this.TicketPool = TicketPool;
         this.producingTickets = producingTickets;
         this.ticketReleaseRate = ticketReleaseRate;
     }
@@ -13,8 +13,8 @@ public class Vendor implements Runnable {
     @Override
     public void run() {
         try {
-            while (ticketingSystem.isRunning()) {
-                ticketingSystem.addTickets(producingTickets);
+            while (TicketPool.isRunning()) {
+                TicketPool.addTickets(producingTickets);
                 Thread.sleep(ticketReleaseRate);
 
             }

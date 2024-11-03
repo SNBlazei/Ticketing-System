@@ -2,16 +2,20 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+        int vendors=3;
+        int customers=6;
         Scanner scanner = new Scanner(System.in);
-        TicketingSystem ticketingSystem=new TicketingSystem(0,0,0,0,0);
+        TicketPool TicketPool=new TicketPool(0,0,0,0,0);
 
 
 
-        ticketingSystem.configure(scanner);
+        TicketPool.configure(scanner);
 
-        Vendor vendor=new Vendor(ticketingSystem,0,0);
+
+        Vendor vendor=new Vendor(TicketPool,0,0);
         Thread t1=new Thread(vendor);
-        Customer customer=new Customer(ticketingSystem,0,0);
+        Customer customer=new Customer(TicketPool,0,0);
         Thread t2=new Thread(customer);
         t1.start();
         t2.start();
@@ -26,15 +30,15 @@ public class Main {
 
                 switch (order) {
                     case 1:
-                        ticketingSystem.startSystem();
-                        ticketOperations(scanner, ticketingSystem);
+                        TicketPool.startSystem();
+                        ticketOperations(scanner, TicketPool);
 
                         break;
                     case 2:
-                        ticketingSystem.stopSystem();
+                        TicketPool.stopSystem();
                         break;
                     case 3:
-                        ticketingSystem.stopSystem();
+                        TicketPool.stopSystem();
                         System.out.println("System Closed");
                         scanner.close();
                         return;
@@ -59,9 +63,9 @@ public class Main {
 
 
     }
-    private static void ticketOperations(Scanner scanner, TicketingSystem ticketingSystem) {
+    private static void ticketOperations(Scanner scanner, TicketPool TicketPool) {
 
-        while(ticketingSystem.isRunning()){
+        while(TicketPool.isRunning()){
             System.out.println("1:Add ticket , 2:Remove ticket , 3:Show Current Tickets , 4:Stop");
 
             if(scanner.hasNextInt()) {
@@ -70,20 +74,20 @@ public class Main {
                 if(operation == 1) {
                     System.out.println("Enter the amount of tickets to add");
                     int amount = scanner.nextInt();
-                    ticketingSystem.addTickets(amount);
+                    TicketPool.addTickets(amount);
                     break;
                 }else if(operation == 2) {
                     System.out.println("Enter the amount of tickets to remove");
                     int amountToRemove = scanner.nextInt();
-                    ticketingSystem.removeTickets(amountToRemove);
+                    TicketPool.removeTickets(amountToRemove);
                     break;
 
 
                 }else if(operation == 3) {
-                    ticketingSystem.showCurrentTickets();
+                    TicketPool.showCurrentTickets();
                     break;
                 }else if(operation == 4) {
-                    ticketingSystem.stopSystem();
+                    TicketPool.stopSystem();
                     break;
                 }
 

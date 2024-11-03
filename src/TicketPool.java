@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class TicketingSystem {
+public class TicketPool {
     private  int totalTickets;
     private  int ticketReleaseRate;
     private  int customerRetrievalRate;
@@ -8,7 +8,7 @@ public class TicketingSystem {
     private  int currentTickets;
     private boolean running=false;
 
-    public TicketingSystem(int totalTickets, int ticketReleaseRate, int customerRetrievalRate, int maxTicketCapacity,int currentTickets) {
+    public TicketPool(int totalTickets, int ticketReleaseRate, int customerRetrievalRate, int maxTicketCapacity,int currentTickets) {
         this.totalTickets = totalTickets;
         this.ticketReleaseRate = ticketReleaseRate;
         this.customerRetrievalRate = customerRetrievalRate;
