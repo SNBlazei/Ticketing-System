@@ -30,13 +30,28 @@ public class Main {
             System.out.println("Invalid choice");
         }
 
+        System.out.println("Enter the number of vendors");
+        int vendors = scanner.nextInt();
+        System.out.println("Enter the number of customers");
+        int customers = scanner.nextInt();
 
-        Vendor vendor=new Vendor(TicketPool,0,0);
-        Thread t1=new Thread(vendor);
-        Customer customer=new Customer(TicketPool,0,0);
-        Thread t2=new Thread(customer);
-        t1.start();
-        t2.start();
+        Thread [] vendorThreads=new Thread[vendors];
+        Thread [] customerThreads=new Thread[customers];
+
+        for (int i = 0; i < vendors; i++) {
+            Vendor vendor=new Vendor(TicketPool,0,TicketPool.getTicketReleaseRate());
+            vendorThreads[i]=new Thread(vendor);
+            vendorThreads[i].start();
+
+        }
+
+
+
+        for (int i = 0; i < customers; i++) {
+            Customer customer=new Customer(TicketPool,TicketPool.getCustomerRetrievalRate(),0);
+            customerThreads[i]=new Thread(customer);
+            customerThreads[i].start();
+        }
 
 
         while (true){
