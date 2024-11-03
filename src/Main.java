@@ -3,14 +3,32 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        int vendors=3;
-        int customers=6;
+
         Scanner scanner = new Scanner(System.in);
         TicketPool TicketPool=new TicketPool(0,0,0,0,0);
-
-
-
         TicketPool.configure(scanner);
+        Configuration configuration=new Configuration(
+                TicketPool.getTotalTickets(),
+                TicketPool.getTicketReleaseRate(),
+                TicketPool.getCustomerRetrievalRate(),
+                TicketPool.getMaxTicketCapacity()
+
+        );
+
+
+        System.out.println("Do you want to save? (y/N)");
+        String answer = scanner.next();
+        if (answer.equalsIgnoreCase("yes")) {
+            System.out.println("Enter the file name (.txt)");
+            String filename = scanner.next();
+            configuration.saveFile(filename);
+        } else if (answer.equalsIgnoreCase("N")) {
+            System.out.println("Not saved");
+
+
+        }else {
+            System.out.println("Invalid choice");
+        }
 
 
         Vendor vendor=new Vendor(TicketPool,0,0);
