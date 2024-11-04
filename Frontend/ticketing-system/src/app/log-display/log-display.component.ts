@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { Component ,Input} from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-log-display',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './log-display.component.html',
-  styleUrl: './log-display.component.css'
+  styleUrls: ['./log-display.component.css']
 })
 export class LogDisplayComponent {
+  @Input() log:string[]=[];
+
 
 }
