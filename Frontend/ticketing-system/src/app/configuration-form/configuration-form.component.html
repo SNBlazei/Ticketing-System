@@ -1,0 +1,7 @@
+<form (ngSubmit)="submitForm()">
+    <label>Total Tickets:<input type="number"[(ngModel)]="config.totalTickets" name="totalTickets" required></label>
+    <label>Ticket Release Rate:<input type="number"[(ngModel)]="config.ticketReleaseRate" name="ticketReleaseRate" required></label>
+    <label>Customer Retrieval Rate:<input type="number"[(ngModel)]="config.customerRetrievalRate" name="customerRetrievalRate" required></label>
+    <label>Max Ticket Capacity:<input type="number"[(ngModel)]="config.maxTicketCapacity" name="maxTicketCapacity" required></label>
+    <button type="submit">Submit</button>
+</form>
