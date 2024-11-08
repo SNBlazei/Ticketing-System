@@ -53,10 +53,6 @@ public class TicketPool {
         this.maxTicketCapacity = maxTicketCapacity;
     }
     public void setCurrentTickets(int currentTickets) {
-        if (currentTickets<0){
-            System.out.println("Invalid ");
-            return;
-        }
 
         this.currentTickets = currentTickets;
     }
@@ -156,48 +152,32 @@ public class TicketPool {
     }
 
     public synchronized void addTickets(int tickets) throws InterruptedException {
-        if(!running){
-            System.out.println("System is not running.Try again later");
-            return;
-
-        }
-        while (getCurrentTickets()+tickets>maxTicketCapacity){
-            System.out.println("Maximum number of tickets exceeded.Wait ");
+        while(currentTickets +tickets> maxTicketCapacity){
+            System.out.println("Maximum number of tickets reached.wait");
             wait();
-
         }
-        {
+        currentTickets += tickets;
+        logTransactions("Added"+tickets+" tickets");
 
-            setCurrentTickets(getCurrentTickets()+tickets);
-            logTransactions("Added " + tickets + " tickets");
-            showCurrentTickets();
-            notifyAll();
-
-        }
     }
 
     public synchronized void removeTickets(int tickets) throws InterruptedException {
-        if(!running){
-            System.out.println("System is not running.Try again later");
-            return;
-        }
-        while (getCurrentTickets()-tickets<=0){
+
+        while (currentTickets-tickets<=0){
             System.out.println("Not enough to remove.Wait ");
             wait();
         }
-        {
-            setCurrentTickets(getCurrentTickets()-tickets);
-            logTransactions("Removed" + tickets + " tickets");
-            showCurrentTickets();
-            notifyAll();
-        }
+        currentTickets -= tickets;
+        logTransactions("Removed"+tickets+" tickets");
+        notifyAll();
+
     }
     public synchronized void showCurrentTickets(){
         System.out.println("Current tickets: " + getCurrentTickets());
 
     }
     private void logTransactions(String massage){
-        System.out.println("LOG:" +massage+ "|currentTickets: "+getCurrentTickets());
+        System.out.println("LOG:" +massage+ "|currentTickets: "+currentTickets);
     }
 
 }

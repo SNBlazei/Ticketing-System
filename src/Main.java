@@ -39,7 +39,7 @@ public class Main {
         Thread [] customerThreads=new Thread[customers];
 
         for (int i = 0; i < vendors; i++) {
-            Vendor vendor=new Vendor(TicketPool,0,TicketPool.getTicketReleaseRate());
+            Vendor vendor=new Vendor(TicketPool,TicketPool.getTotalTickets(),TicketPool.getTicketReleaseRate(),i);
             vendorThreads[i]=new Thread(vendor);
             vendorThreads[i].start();
 
@@ -48,7 +48,7 @@ public class Main {
 
 
         for (int i = 0; i < customers; i++) {
-            Customer customer=new Customer(TicketPool,TicketPool.getCustomerRetrievalRate(),0);
+            Customer customer=new Customer(TicketPool,TicketPool.getCustomerRetrievalRate(),1);
             customerThreads[i]=new Thread(customer);
             customerThreads[i].start();
         }

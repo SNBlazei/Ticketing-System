@@ -1,28 +1,31 @@
 public class Vendor implements Runnable {
 
     private final TicketPool ticketPool;
-    private final int producingTickets;
+    private final int ticketsToAdd;
     private final int ticketReleaseRate;
+    private final int vendorId;
 
-    public Vendor(TicketPool ticketPool,int producingTickets,int ticketReleaseRate) {
+    public Vendor(TicketPool ticketPool,int ticketsToAdd,int ticketReleaseRate,int vendorId) {
         this.ticketPool = ticketPool;
-        this.producingTickets = producingTickets;
+        this.ticketsToAdd = ticketsToAdd;
         this.ticketReleaseRate = ticketReleaseRate;
+        this.vendorId = vendorId;
     }
 
     @Override
     public void run() {
         try {
             while (ticketPool.isRunning()) {
-                System.out.println("Vendor adding" + producingTickets + " tickets");
-                ticketPool.addTickets(producingTickets);
+                ticketPool.addTickets(1);
+                System.out.println("Vendor " + vendorId + " tickets");
+
                 Thread.sleep(ticketReleaseRate);
 
             }
 
             }
         catch(InterruptedException e){
-               System.out.println("Error");
+               System.out.println("Error in vendor"+vendorId);
 
 
 
