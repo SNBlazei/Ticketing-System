@@ -80,7 +80,7 @@ public class TicketPool {
 
 
         while (true){
-            System.out.println("Enter the ticket release rate");
+            System.out.println("Enter the ticket release rate(ms)");
             if(scanner.hasNextInt()) {
                 ticketReleaseRate = scanner.nextInt();
 
@@ -158,6 +158,7 @@ public class TicketPool {
         }
         currentTickets += tickets;
         logTransactions("Added"+tickets+" tickets");
+        notifyAll();
 
     }
 

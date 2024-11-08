@@ -38,20 +38,7 @@ public class Main {
         Thread [] vendorThreads=new Thread[vendors];
         Thread [] customerThreads=new Thread[customers];
 
-        for (int i = 0; i < vendors; i++) {
-            Vendor vendor=new Vendor(TicketPool,TicketPool.getTotalTickets(),TicketPool.getTicketReleaseRate(),i);
-            vendorThreads[i]=new Thread(vendor);
-            vendorThreads[i].start();
 
-        }
-
-
-
-        for (int i = 0; i < customers; i++) {
-            Customer customer=new Customer(TicketPool,TicketPool.getCustomerRetrievalRate(),1);
-            customerThreads[i]=new Thread(customer);
-            customerThreads[i].start();
-        }
 
 
         while (true){
@@ -64,6 +51,26 @@ public class Main {
                 switch (order) {
                     case 1:
                         TicketPool.startSystem();
+                        for (int i = 0; i < vendors; i++) {
+                            Vendor vendor=new Vendor(TicketPool,TicketPool.getTotalTickets(),TicketPool.getTicketReleaseRate(),i);
+                            vendorThreads[i]=new Thread(vendor);
+                            vendorThreads[i].start();
+
+                        }
+                        for (int i = 0; i < customers; i++) {
+                            Customer customer=new Customer(TicketPool,TicketPool.getCustomerRetrievalRate(),1);
+                            customerThreads[i]=new Thread(customer);
+                            customerThreads[i].start();
+                        }
+                        try {
+                            Thread.sleep(2000);
+                        }catch (InterruptedException e){
+                            System.out.println("Error");
+                        }
+
+
+
+
                         ticketOperations(scanner, TicketPool);
 
                         break;
