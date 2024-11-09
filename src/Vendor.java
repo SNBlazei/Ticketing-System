@@ -17,9 +17,9 @@ public class Vendor implements Runnable {
         try {
             while (ticketPool.isRunning()) {
                 synchronized (ticketPool) {
-                    if (ticketPool.getCurrentTickets() < ticketPool.getMaxTicketCapacity()) {
-                        ticketPool.addTickets(1);
-                        System.out.println("Vendor " + vendorId + " tickets");
+                    if (ticketPool.getCurrentTickets() +ticketsToAdd< ticketPool.getMaxTicketCapacity()) {
+                        ticketPool.addTickets(ticketsToAdd);
+                        System.out.println("Vendor " + vendorId + " added " + ticketsToAdd + " tickets");
                         ticketPool.notifyAll();
 
                     } else {
