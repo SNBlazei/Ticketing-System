@@ -17,24 +17,18 @@ public class Main {
 
 
         System.out.println("Do you want to save? (y/N)");
-
         String answer = scanner.next();
         if (answer.equalsIgnoreCase("yes")) {
             System.out.println("Enter the file name (.txt)");
             String filename = scanner.next();
             configuration.saveFile(filename);
-        } else if (answer.equalsIgnoreCase("no")) {
+        } else if (answer.equalsIgnoreCase("N")) {
             System.out.println("Not saved");
 
 
         }else {
-            System.out.println("Invalid choice.Enter (yes or no)");
-
-
+            System.out.println("Invalid choice");
         }
-
-
-
 
         System.out.println("Enter the number of vendors");
         int vendors = scanner.nextInt();
@@ -82,17 +76,7 @@ public class Main {
                         break;
                     case 2:
                         TicketPool.stopSystem();
-                        for(Thread venndorThread:vendorThreads) {
-                            if(venndorThread !=null) {
-                                venndorThread.interrupt();
 
-                            }
-                        }
-                        for (Thread customerThread:customerThreads) {
-                            if(customerThread !=null) {
-                                customerThread.interrupt();
-                            }
-                        }
                         break;
                     case 3:
                         TicketPool.stopSystem();
