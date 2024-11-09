@@ -16,16 +16,28 @@ public class Vendor implements Runnable {
     public void run() {
         try {
             while (ticketPool.isRunning()) {
-                ticketPool.addTickets(1);
-                System.out.println("Vendor " + vendorId + " tickets");
+                synchronized (ticketPool) {
+                    if (ticketPool.getCurrentTickets() < ticketPool.getMaxTicketCapacity()) {
+                        ticketPool.addTickets(1);
+                        System.out.println("Vendor " + vendorId + " tickets");
+                        ticketPool.notifyAll();
 
+                    } else {
+                        System.out.println("Vendor " + vendorId + " cannot add more tickets ");
+                        ticketPool.wait();
+                    }
+
+                }
                 Thread.sleep(ticketReleaseRate);
 
-            }
 
             }
-        catch(InterruptedException e){
-               System.out.println("Error in vendor"+vendorId);
+
+        } catch (InterruptedException e) {
+            System.out.println("Vendor " + vendorId + " interrupted");
+        }
+
+
 
 
 
@@ -35,4 +47,4 @@ public class Vendor implements Runnable {
 
     }
 
-}
+

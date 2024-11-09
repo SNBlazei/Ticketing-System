@@ -51,6 +51,7 @@ public class Main {
                 switch (order) {
                     case 1:
                         TicketPool.startSystem();
+                        ticketOperations(scanner, TicketPool);
                         for (int i = 0; i < vendors; i++) {
                             Vendor vendor=new Vendor(TicketPool,TicketPool.getTotalTickets(),TicketPool.getTicketReleaseRate(),i);
                             vendorThreads[i]=new Thread(vendor);
@@ -71,7 +72,7 @@ public class Main {
 
 
 
-                        ticketOperations(scanner, TicketPool);
+
 
                         break;
                     case 2:

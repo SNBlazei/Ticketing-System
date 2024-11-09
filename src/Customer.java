@@ -1,11 +1,11 @@
 public class Customer implements Runnable {
 
-    private final TicketPool TicketPool;
+    private final TicketPool ticketPool;
     private final int customerRetrievalRate;
     private final int ticketsToBuy;
 
-    public Customer(TicketPool TicketPool, int customerRetrievalRate, int ticketsToBuy) {
-            this.TicketPool = TicketPool;
+    public Customer(TicketPool ticketPool, int customerRetrievalRate, int ticketsToBuy) {
+            this.ticketPool = ticketPool;
             this.customerRetrievalRate = customerRetrievalRate;
             this.ticketsToBuy = ticketsToBuy;
 
@@ -15,17 +15,28 @@ public class Customer implements Runnable {
 
     @Override
     public void run() {
-        while (TicketPool.isRunning()) {
+        try {
+            while (ticketPool.isRunning()) {
+                synchronized (ticketPool) {
+                    if (ticketPool.getCurrentTickets()>=ticketsToBuy) {
+                        ticketPool.removeTickets(ticketsToBuy);
+                        System.out.println("Customer purchased" + ticketsToBuy + " tickets");
+                        ticketPool.notifyAll();
 
-            try {
-                TicketPool.removeTickets(ticketsToBuy);
-                System.out.println("Customer purchased " +ticketsToBuy + " tickets");
+                    }else {
+                        System.out.println("Customer Waiting");
+                        ticketPool.wait();
+                    }
+
+                }
                 Thread.sleep(customerRetrievalRate);
-            }catch (InterruptedException e) {
-                System.out.println("Interrupted");
 
             }
+        }catch (Exception e) {
+            System.out.println("Interrupted");
 
         }
+
     }
+
 }
