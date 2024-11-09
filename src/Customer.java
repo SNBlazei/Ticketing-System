@@ -23,6 +23,7 @@ public class Customer implements Runnable {
                 Thread.sleep(customerRetrievalRate);
             }catch (InterruptedException e) {
                 System.out.println("Interrupted");
+                Thread.currentThread().interrupt();
             }
 
         }

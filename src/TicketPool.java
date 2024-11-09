@@ -140,6 +140,7 @@ public class TicketPool {
         }
         running=true;
         System.out.println("System started");
+        notifyAll();
     }
 
     public void stopSystem(){
@@ -148,7 +149,9 @@ public class TicketPool {
             return;
         }
         running=false;
+        currentTickets =totalTickets;
         System.out.println("System stopped");
+        notifyAll();
     }
 
     public synchronized void addTickets(int tickets) throws InterruptedException {
