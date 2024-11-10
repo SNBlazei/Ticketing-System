@@ -1,50 +1,30 @@
-public class Vendor implements Runnable {
+public  class Vendor implements Runnable {
 
-    private final TicketPool ticketPool;
-    private final int ticketsToAdd;
-    private final int ticketReleaseRate;
-    private final int vendorId;
+    private int vendorId;
+    private int ticketPerRelease;
+    private int releaseInterval;
+    private TicketPool ticketPool;
 
-    public Vendor(TicketPool ticketPool,int ticketsToAdd,int ticketReleaseRate,int vendorId) {
-        this.ticketPool = ticketPool;
-        this.ticketsToAdd = ticketsToAdd;
-        this.ticketReleaseRate = ticketReleaseRate;
+    public Vendor(int vendorId, int ticketPerRelease, int releaseInterval,TicketPool ticketPool) {
+
         this.vendorId = vendorId;
+        this.ticketPerRelease = ticketPerRelease;
+        this.releaseInterval = releaseInterval;
+        this.ticketPool = ticketPool;
     }
 
     @Override
     public void run() {
-        try {
-            while (ticketPool.isRunning()) {
-                synchronized (ticketPool) {
-                    if (ticketPool.getCurrentTickets() +ticketsToAdd< ticketPool.getMaxTicketCapacity()) {
-                        ticketPool.addTickets(ticketsToAdd);
-                        System.out.println("Vendor " + vendorId + " added " + ticketsToAdd + " tickets");
-                        ticketPool.notifyAll();
-
-                    } else {
-                        System.out.println("Vendor " + vendorId + " cannot add more tickets ");
-                        ticketPool.wait();
-                    }
-
-                }
-                Thread.sleep(ticketReleaseRate);
-
-
+        while (ticketPool.isRunning()){
+            try {
+                ticketPool.addTickets(ticketPerRelease);
+                System.out.println("Vendor " + vendorId + "added" + ticketPerRelease);
+                Thread.sleep(releaseInterval);
+            }catch (InterruptedException e){
+                System.out.println("Vendor " + vendorId + "interrupted");
             }
-
-        } catch (InterruptedException e) {
-            System.out.println("Vendor " + vendorId + " interrupted");
         }
-
-
-
-
-
-
-        }
-
 
     }
 
-
+}

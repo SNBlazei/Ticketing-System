@@ -166,7 +166,7 @@ public class TicketPool {
 
     public synchronized void removeTickets(int tickets) throws InterruptedException {
 
-        while (currentTickets-tickets<=0){
+        while (currentTickets-tickets< 0){
             System.out.println("Not enough to remove.Wait ");
             wait();
         }

@@ -5,13 +5,13 @@ public class Main {
 
 
         Scanner scanner = new Scanner(System.in);
-        TicketPool TicketPool=new TicketPool(0,0,0,0,0);
-        TicketPool.configure(scanner);
+        TicketPool ticketPool=new TicketPool(0,0,0,0,0);
+        ticketPool.configure(scanner);
         Configuration configuration=new Configuration(
-                TicketPool.getTotalTickets(),
-                TicketPool.getTicketReleaseRate(),
-                TicketPool.getCustomerRetrievalRate(),
-                TicketPool.getMaxTicketCapacity()
+                ticketPool.getTotalTickets(),
+                ticketPool.getTicketReleaseRate(),
+                ticketPool.getCustomerRetrievalRate(),
+                ticketPool.getMaxTicketCapacity()
 
         );
 
@@ -30,19 +30,15 @@ public class Main {
             System.out.println("Invalid choice");
         }
 
-        System.out.println("Enter the number of vendors");
-        int vendors = scanner.nextInt();
-        System.out.println("Enter the number of customers");
-        int customers = scanner.nextInt();
 
-        Thread [] vendorThreads=new Thread[vendors];
-        Thread [] customerThreads=new Thread[customers];
+
+
 
 
 
 
         while (true){
-            System.out.println("Enter order (1:Start,2:Stop,3:Exit):");
+            System.out.println("Enter order (1:Start,2:Stop):");
 
             if(scanner.hasNextInt()) {
                 int order = scanner.nextInt();
@@ -50,24 +46,13 @@ public class Main {
 
                 switch (order) {
                     case 1:
-                        TicketPool.startSystem();
-                        ticketOperations(scanner, TicketPool);
-                        for (int i = 0; i < vendors; i++) {
-                            Vendor vendor=new Vendor(TicketPool,TicketPool.getTotalTickets(),TicketPool.getTicketReleaseRate(),i);
-                            vendorThreads[i]=new Thread(vendor);
-                            vendorThreads[i].start();
+                        ticketPool.startSystem();
+                        Thread vendorThread=new Thread(new Vendor(1,3,2000, ticketPool));
+                        Thread customerThread=new Thread(new Customer(1,1500,ticketPool));
 
-                        }
-                        for (int i = 0; i < customers; i++) {
-                            Customer customer=new Customer(TicketPool,TicketPool.getCustomerRetrievalRate(),1);
-                            customerThreads[i]=new Thread(customer);
-                            customerThreads[i].start();
-                        }
-                        try {
-                            Thread.sleep(2000);
-                        }catch (InterruptedException e){
-                            System.out.println("Error");
-                        }
+                        vendorThread.start();
+                        customerThread.start();
+
 
 
 
@@ -76,14 +61,12 @@ public class Main {
 
                         break;
                     case 2:
-                        TicketPool.stopSystem();
-
-                        break;
-                    case 3:
-                        TicketPool.stopSystem();
+                        ticketPool.stopSystem();
                         System.out.println("System Closed");
                         scanner.close();
                         return;
+
+
                     default:
                         System.out.println("Invalid order");
 
