@@ -19,7 +19,6 @@ public class Configuration implements Serializable {
 
 
 
-
     }
 
     public int getTotalTickets() {

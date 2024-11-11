@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,6 +18,8 @@ public class Main {
         );
 
 
+
+
         System.out.println("Do you want to save? (y/N)");
         String answer = scanner.next();
         if (answer.equalsIgnoreCase("yes")) {
@@ -27,7 +31,8 @@ public class Main {
 
 
         }else {
-            System.out.println("Invalid choice");
+            System.out.println("Invalid choice.Please Enter Valid choice");
+
         }
 
 
@@ -47,12 +52,21 @@ public class Main {
                 switch (order) {
                     case 1:
                         ticketPool.startSystem();
-                        Thread vendorThread=new Thread(new Vendor(1,3,2000, ticketPool));
-                        Thread customerThread=new Thread(new Customer(1,1500,ticketPool));
+                        List<Thread> threads=new ArrayList<>();
+                        Thread vendorThread1=new Thread(new Vendor(1,3,2000, ticketPool));
+                        Thread vendorThread2=new Thread(new Vendor(2,6,1500, ticketPool));
+                        threads.add(vendorThread1);
+                        threads.add(vendorThread2);
 
-                        vendorThread.start();
-                        customerThread.start();
 
+                        Thread customerThread1=new Thread(new Customer(1,1500,ticketPool));
+                        Thread customerThread2=new Thread(new Customer(2,2000,ticketPool));
+                        threads.add(customerThread1);
+                        threads.add(customerThread2);
+
+                        for (Thread thread : threads) {
+                            thread.start();
+                        }
 
 
 
@@ -88,49 +102,8 @@ public class Main {
 
 
     }
-    private static void ticketOperations(Scanner scanner, TicketPool TicketPool) {
-
-        while(TicketPool.isRunning()){
-            System.out.println("1:Add ticket , 2:Remove ticket , 3:Show Current Tickets , 4:Stop");
-
-            if(scanner.hasNextInt()) {
-                int operation = scanner.nextInt();
-            try {
-                if(operation == 1) {
-                    System.out.println("Enter the amount of tickets to add");
-                    int amount = scanner.nextInt();
-                    TicketPool.addTickets(amount);
-                    break;
-                }else if(operation == 2) {
-                    System.out.println("Enter the amount of tickets to remove");
-                    int amountToRemove = scanner.nextInt();
-                    TicketPool.removeTickets(amountToRemove);
-                    break;
 
 
-                }else if(operation == 3) {
-                    TicketPool.showCurrentTickets();
-                    break;
-                }else if(operation == 4) {
-                    TicketPool.stopSystem();
-                    break;
-                }
-
-            }catch (InterruptedException e) {
-                System.out.println("Error");
-            }
-
-
-            }else{
-                System.out.println("Invalid input");
-                scanner.nextLine();
-            }
-
-
-
-            }
-        }
-
-    }
+}
 
 

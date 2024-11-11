@@ -180,7 +180,7 @@ public class TicketPool {
 
     }
     private void logTransactions(String massage){
-        System.out.println("LOG:" +massage+ "|currentTickets: "+currentTickets);
+        System.out.println("LOG:" + massage + " |currentTickets: "+ currentTickets);
     }
 
 }

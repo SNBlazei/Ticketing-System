@@ -16,7 +16,7 @@ public class Customer implements Runnable {
             try {
                 int ticketsToBuy=1;
                 ticketPool.removeTickets(ticketsToBuy);
-                System.out.println("Customer " + customerID + " purchased" + ticketsToBuy +"Ticket");
+                System.out.println(" Customer " + customerID + " purchased" + ticketsToBuy +" Ticket ");
                 Thread.sleep(retrievalInterval);
             }catch(InterruptedException e){
                 System.out.println("Customer " + customerID + " interrupted");
