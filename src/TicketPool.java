@@ -40,22 +40,7 @@ public class TicketPool {
         return running;
     }
 
-    public void setTotalTickets(int totalTickets) {
-        this.totalTickets = totalTickets;
-    }
-    public void setTicketReleaseRate(int ticketReleaseRate) {
-        this.ticketReleaseRate = ticketReleaseRate;
-    }
-    public void setCustomerRetrievalRate(int customerRetrievalRate) {
-        this.customerRetrievalRate = customerRetrievalRate;
-    }
-    public void setMaxTicketCapacity(int maxTicketCapacity) {
-        this.maxTicketCapacity = maxTicketCapacity;
-    }
-    public void setCurrentTickets(int currentTickets) {
 
-        this.currentTickets = currentTickets;
-    }
 
     public void  configure(Scanner scanner) {
 
@@ -159,7 +144,7 @@ public class TicketPool {
             wait();
         }
         currentTickets += tickets;
-        logTransactions("Added"+tickets+" tickets");
+        logTransactions(" Added "+ tickets + " tickets ");
         notifyAll();
 
     }
@@ -171,7 +156,7 @@ public class TicketPool {
             wait();
         }
         currentTickets -= tickets;
-        logTransactions("Removed"+tickets+" tickets");
+        logTransactions(" Removed "+ tickets+ " tickets");
         notifyAll();
 
     }
