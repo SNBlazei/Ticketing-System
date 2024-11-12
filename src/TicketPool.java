@@ -47,15 +47,15 @@ public class TicketPool {
 
 
         while (true){
-            System.out.println("Enter the total number of tickets");
+            System.out.println("Enter the total number of tickets (1-1000)");
             if(scanner.hasNextInt()) {
                 totalTickets = scanner.nextInt();
 
-                if (totalTickets > 0) {
+                if (totalTickets > 0 && totalTickets <1000) {
 
                     break;
                 } else {
-                    System.out.println("value must be positive integer");
+                    System.out.println("value must be between 1 and 1000");
                 }
             }else{
                 System.out.println("Invalid input");
@@ -65,14 +65,14 @@ public class TicketPool {
 
 
         while (true){
-            System.out.println("Enter the ticket release rate(ms)");
+            System.out.println("Enter the ticket release rate (1-10)");
             if(scanner.hasNextInt()) {
                 ticketReleaseRate = scanner.nextInt();
 
-                if (ticketReleaseRate > 0) {
+                if (ticketReleaseRate > 0 && ticketReleaseRate <= 10) {
                     break;
                 }else {
-                    System.out.println("value must be positive integer");
+                    System.out.println("value must be between 1 and 10");
                 }
             }else {
                 System.out.println("Invalid input");
@@ -81,14 +81,14 @@ public class TicketPool {
         }
 
         while (true){
-            System.out.println("Enter the customer retrieval");
+            System.out.println("Enter the customer retrieval rate (400-1500)ms");
             if(scanner.hasNextInt()) {
                 customerRetrievalRate = scanner.nextInt();
 
-                if (customerRetrievalRate > 0) {
+                if (customerRetrievalRate >= 400 && customerRetrievalRate <= 1500) {
                     break;
                 }else {
-                    System.out.println("value must be positive integer");
+                    System.out.println("value must be between 400 and 1500");
                 }
             }else {
                 System.out.println("Invalid input");
@@ -97,13 +97,13 @@ public class TicketPool {
         }
 
         while (true){
-            System.out.println("Enter the max ticket capacity");
+            System.out.println("Enter the max ticket capacity (100-5000)");
             if(scanner.hasNextInt()) {
                 maxTicketCapacity = scanner.nextInt();
-                if (maxTicketCapacity > 0) {
+                if (maxTicketCapacity >= 100 && maxTicketCapacity <= 5000) {
                     break;
                 }else{
-                    System.out.println("value must be positive integer");
+                    System.out.println("value must be between 100 and 5000");
                 }
             }else {
                 System.out.println("Invalid input");
