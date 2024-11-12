@@ -20,20 +20,10 @@ public class Main {
 
 
 
-        System.out.println("Do you want to save? (y/N)");
-        String answer = scanner.next();
-        if (answer.equalsIgnoreCase("yes")) {
-            System.out.println("Enter the file name (.txt)");
-            String filename = scanner.next();
-            configuration.saveFile(filename);
-        } else if (answer.equalsIgnoreCase("N")) {
-            System.out.println("Not saved");
+        System.out.println("Enter the file name (.txt)");
+        String fileName = scanner.next();
+        configuration.saveFile(fileName);
 
-
-        }else {
-            System.out.println("Invalid choice.Please Enter Valid choice");
-
-        }
 
 
 
@@ -53,8 +43,8 @@ public class Main {
                     case 1:
                         ticketPool.startSystem();
                         List<Thread> threads=new ArrayList<>();
-                        Thread vendorThread1=new Thread(new Vendor(1,3,2000, ticketPool));
-                        Thread vendorThread2=new Thread(new Vendor(2,6,1500, ticketPool));
+                        Thread vendorThread1=new Thread(new Vendor(1,20,2000, ticketPool));
+                        Thread vendorThread2=new Thread(new Vendor(2,20,1500, ticketPool));
                         threads.add(vendorThread1);
                         threads.add(vendorThread2);
 
