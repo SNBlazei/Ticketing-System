@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="57e4a7e7-82f1-44ca-9b8f-29e83ef478e8" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2oFo85TCzVjmjex1GhD9544fnYo" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/nimes/OneDrive/Desktop/TicketManagementSystem/Ticketing-System/Backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/nimes/OneDrive/Desktop/TicketManagementSystem/src/Main.java",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="TicketManagementSystem" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="TicketManagementSystem" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="57e4a7e7-82f1-44ca-9b8f-29e83ef478e8" name="Changes" comment="" />
+      <created>1730474523278</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1730474523278</updated>
+      <workItem from="1730474524326" duration="4777000" />
+      <workItem from="1730516566676" duration="1004000" />
+      <workItem from="1730518301574" duration="8716000" />
+      <workItem from="1730539424270" duration="11489000" />
+      <workItem from="1730600204249" duration="29088000" />
+      <workItem from="1730822364373" duration="1917000" />
+      <workItem from="1730863700809" duration="362000" />
+      <workItem from="1730865030309" duration="312000" />
+      <workItem from="1730865401581" duration="440000" />
+      <workItem from="1730989664261" duration="1634000" />
+      <workItem from="1731044132890" duration="6419000" />
+      <workItem from="1731066747194" duration="2836000" />
+      <workItem from="1731069661021" duration="16628000" />
+      <workItem from="1731121126953" duration="9528000" />
+      <workItem from="1731141396454" duration="7619000" />
+      <workItem from="1731154786735" duration="2801000" />
+      <workItem from="1731167334999" duration="2055000" />
+      <workItem from="1731204699473" duration="10442000" />
+      <workItem from="1731243739443" duration="3414000" />
+      <workItem from="1731313512675" duration="6143000" />
+      <workItem from="1731334718975" duration="4044000" />
+      <workItem from="1731377572392" duration="12262000" />
+      <workItem from="1731408399167" duration="9619000" />
+      <workItem from="1731462660709" duration="3427000" />
+      <workItem from="1731485328904" duration="2082000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

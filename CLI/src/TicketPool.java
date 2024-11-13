@@ -145,6 +145,9 @@ public class TicketPool {
         }
         currentTickets += tickets;
         logTransactions(" Added "+ tickets + " tickets ");
+        if (currentTickets > maxTicketCapacity) {
+            stopSystem();
+        }
         notifyAll();
 
     }
@@ -157,6 +160,9 @@ public class TicketPool {
         }
         currentTickets -= tickets;
         logTransactions(" Removed "+ tickets+ " tickets");
+        if (currentTickets > maxTicketCapacity) {
+            stopSystem();
+        }
         notifyAll();
 
     }
