@@ -1,10 +1,10 @@
-import java.io.Serializable;
+
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Configuration implements Serializable {
+public class Configuration  {
 
-    private static final long serialVersionUID = 1L;
+
 
     private int totalTickets;
     private int ticketReleaseRate;
