@@ -1,4 +1,0 @@
-Total Tickets: 2
-Ticket Release Rate: 4
-Customer Retrieval Rate: 5
-Max Ticket Capacity: 6
