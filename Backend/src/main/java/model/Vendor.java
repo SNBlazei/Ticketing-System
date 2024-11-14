@@ -1,51 +1,40 @@
 package model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 
-@Entity
-public class Vendor {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    private String name;
-    private String email;
-    private String configSettings;
 
-    public Vendor(int id, String name, String email, String configSettings) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.configSettings = configSettings;
 
-    }
-    public int getId() {
-        return id;
-    }
-    public String getName() {
-        return name;
-    }
-    public String getEmail() {
-        return email;
-    }public String configSettings() {
-        return configSettings;
-    }
-    public void setId(int id) {
-        this.id = id;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public void setEmail(String email) {
-        this.email = email;
-    }
-    public void setConfigSettings(String configSettings) {
-        this.configSettings = configSettings;
+
+public class Vendor implements Runnable {
+    private final TicketPool ticketPool;
+    private final int vendorId;
+
+    public Vendor(TicketPool ticketPool, int vendorId) {
+        this.ticketPool = ticketPool;
+        this.vendorId = vendorId;
     }
 
-    public Vendor() {
+
+
+
+
+
+
+
+
+    @Override
+    public void run() {
+        try {
+            while(ticketPool.isRunning()){
+                ticketPool.addTicket(10);
+                System.out.println("Vendor " + vendorId + " added 10 Tickets");
+                Thread.sleep(1000);
+
+            }
+        }catch(Exception e){
+            Thread.currentThread().interrupt();
+
+        }
+
 
     }
 

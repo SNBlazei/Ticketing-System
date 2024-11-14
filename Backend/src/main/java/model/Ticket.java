@@ -3,7 +3,7 @@ package model;
 import jakarta.persistence.*;
 import org.springframework.data.repository.cdi.Eager;
 
-@Eager
+@Entity
 public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

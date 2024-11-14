@@ -1,52 +1,42 @@
 package model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 
-@Entity
-public class Customer {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    private String name;
-    private String email;
-    private int telephone;
 
-    public Customer(int id, String name, String email, int telephone) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.telephone = telephone;
+
+public class Customer implements Runnable {
+
+    private final  TicketPool ticketPool;
+    private final  int customerId;
+
+
+
+    public Customer(TicketPool ticketPool, int customerId) {
+        this.ticketPool = ticketPool;
+        this.customerId = customerId;
 
     }
-    public Customer() {
+
+    @Override
+    public void run() {
+
+        try {
+            while(ticketPool.isRunning()){
+                if (ticketPool.hasTicket()){
+                    Ticket ticket=ticketPool.removeTicket();
+                    System.out.println("Customer "+customerId+" purchased "+ticket);
+
+                }else{
+                    System.out.println("Customer "+customerId+" is waiting");
+                }
+                Thread.sleep(1000);
+            }
+        }catch (Exception e){
+            Thread.currentThread().interrupt();
+
+        }
+
 
     }
-    public int getId() {
-        return id;
-    }
-    public void setId(int id) {
-        this.id = id;
-    }
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public String getEmail() {
-        return email;
-    }
-    public void setEmail(String email) {
-        this.email = email;
-    }
-    public int getTelephone() {
-        return telephone;
-    }
-    public void setTelephone(int telephone) {
-        this.telephone = telephone;
-    }
+
 
 }
