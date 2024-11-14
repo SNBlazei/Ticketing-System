@@ -1,6 +1,14 @@
+import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Logger;
+import java.util.logging.Level;
+import java.util.logging.FileHandler;
+import java.util.logging.SimpleFormatter;
+
 
 public class TicketPool {
+
+
     private  int totalTickets;
     private  int ticketReleaseRate;
     private  int customerRetrievalRate;
@@ -171,7 +179,19 @@ public class TicketPool {
 
     }
     private void logTransactions(String massage){
-        System.out.println("LOG:" + massage + " |currentTickets: "+ currentTickets);
+        logger.info("LOG:" + massage + " |currentTickets: "+ currentTickets);
     }
+    private static final Logger logger = Logger.getLogger(TicketPool.class.getName());
+    static {
+        try {
+            FileHandler fileHandler=new FileHandler("Ticketing.log",true);
+            fileHandler.setFormatter(new SimpleFormatter());
+            logger.addHandler(fileHandler);
+            logger.setUseParentHandlers(false);
+        }catch (IOException e){
+            System.out.println("Error while creating log file");
+        }
+    }
+
 
 }
