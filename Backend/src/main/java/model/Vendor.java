@@ -25,12 +25,13 @@ public class Vendor implements Runnable {
     public void run() {
         try {
             while(ticketPool.isRunning()){
-                ticketPool.addTicket(10);
-                System.out.println("Vendor " + vendorId + " added 10 Tickets");
+                ticketPool.addTicket(5);
+                System.out.println("Vendor " + vendorId + " added  Tickets");
                 Thread.sleep(1000);
 
             }
         }catch(Exception e){
+            System.out.println("Vendor "+vendorId+" failed to add Tickets");
             Thread.currentThread().interrupt();
 
         }

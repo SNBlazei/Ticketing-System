@@ -31,6 +31,7 @@ public class Customer implements Runnable {
                 Thread.sleep(1000);
             }
         }catch (Exception e){
+            System.out.println("Customer "+customerId+" Interrupted");
             Thread.currentThread().interrupt();
 
         }

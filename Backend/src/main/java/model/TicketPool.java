@@ -14,35 +14,38 @@ public class TicketPool {
 
     public synchronized void addTicket(int tickets) throws InterruptedException{
         while (ticketQueue.size() >= maxCapacity) {
+            System.out.println("Ticket pool is full.waiting");
             wait();
         }
         for (int i = 0; i < tickets; i++) {
             ticketQueue.add(new Ticket());
 
         }
+        System.out.println("Added " + tickets + " tickets");
         notifyAll();
 
 
     }
 
     public synchronized Ticket removeTicket() throws InterruptedException{
-        while (ticketQueue.isEmpty()) {
+        while (ticketQueue.isEmpty() && running) {
+            System.out.println("Ticket pool is empty.waiting");
             wait();
-        }try {
-            wait();
-        }catch (InterruptedException e){
-            Thread.currentThread().interrupt();
-
+        }
+        if(!running) {
+            System.out.println("System Stopped");
+            return null;
 
         }
         Ticket ticket = ticketQueue.poll();
+        System.out.println("Ticket purchased: " + ticket);
         notifyAll();
         return ticket;
 
 
     }
 
-    public boolean hasTicket(){
+    public synchronized boolean hasTicket(){
         return !ticketQueue.isEmpty();
     }
     public synchronized void stopSystem(){
