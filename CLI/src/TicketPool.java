@@ -189,6 +189,7 @@ public class TicketPool {
             logger.setUseParentHandlers(false);
         }catch (IOException e){
             System.out.println("Error while creating log file");
+
         }
     }
 

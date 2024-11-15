@@ -15,16 +15,16 @@ public class Booking {
     @JoinColumn(name = "ticket_id")
     private Ticket ticket;
 
-    @ManyToOne
-    @JoinColumn(name = "customer_id")
-    private Customer customer;
+  //  @OneToOne
+   // @JoinColumn(name = "customer_id")
+  //  private Customer customer;
 
-    @ManyToOne
-    @JoinColumn(name = "vendor_id")
-    private Vendor vendor;
+ //   @ManyToOne
+  //  @JoinColumn(name = "vendor_id")
+    //private Vendor vendor;
 
-    private String bookingType;
-    private LocalDateTime dateGiven;
+    //private String bookingType;
+   // private LocalDateTime dateGiven;
 
 
 }
