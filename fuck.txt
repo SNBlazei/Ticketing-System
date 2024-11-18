@@ -1,0 +1,1 @@
+Three main methodologies were taken into consideration while choosing the best design methodology for the Breast Cancer Detection System: Agile Design Methodology, Object-Oriented Analysis and Design (OOAD), and Structured Systems Analysis and Design Method (SSADM).
