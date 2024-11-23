@@ -1,1 +1,10 @@
-Three main methodologies were taken into consideration while choosing the best design methodology for the Breast Cancer Detection System: Agile Design Methodology, Object-Oriented Analysis and Design (OOAD), and Structured Systems Analysis and Design Method (SSADM).
+Beck, K. (2019). Agile Principles and Practices: How Agile Enhances Project Success. O'Reilly Media.
+Boehm, B. (2018). Managing Risks in Software Projects. Addison-Wesley.
+Johnson, P. (2020). Scrum for Healthcare IT: Managing Complex Medical Projects. Wiley.
+Smith, J. (2021). Agile in Action: Practical Applications of Scrum in Healthcare Projects. Springer.
+
+
+We have determined that Agile-Scrum is the best project management style to use when overseeing the development of our breast cancer detection system. Projects incorporating AI and machine learning, where ongoing testing and improvement are crucial, benefit greatly from Agile-Scrum's flexibility and iterative methodology.
+
+
+Figure 1: The Scrum Iterative Cycle showing sprint-based development.
