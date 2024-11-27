@@ -1,9 +1,6 @@
 package com.example.spring.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
@@ -12,11 +9,33 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Customer {
+public class Customer extends Thread {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
     private String email;
     private String phone;
+
+    @Transient
+    private  TicketPool ticketPool;
+
+    public Customer( TicketPool ticketPool) {
+
+        this.ticketPool = ticketPool;
+    }
+    @Override
+    public void run() {
+        try {
+            while(ticketPool.isRunning()){
+                Ticket ticket=ticketPool.removeTicket();
+                if (ticket!=null){
+                    System.out.println("Customer purchased " + ticket.toString());
+                }
+                Thread.sleep(1500);
+            }
+        }catch (InterruptedException e){
+            Thread.currentThread().interrupt();
+        }
+    }
 }
