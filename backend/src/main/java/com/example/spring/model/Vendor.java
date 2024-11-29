@@ -13,7 +13,7 @@ public class Vendor extends Thread {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String name;
+    private String vendorName;
     private String email;
     private String phone;
     private int config;
