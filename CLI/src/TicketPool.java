@@ -88,7 +88,7 @@ public class TicketPool {
         }
 
         while (true){
-            System.out.println("Enter the customer retrieval rate (400-1500)ms");
+            System.out.println("Enter the customer retrieval rate (400-1500)");
             if(scanner.hasNextInt()) {
                 customerRetrievalRate = scanner.nextInt();
 
