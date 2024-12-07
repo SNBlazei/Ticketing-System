@@ -130,6 +130,7 @@ public class TicketPool {
             System.out.println("System is already running");
             return;
         }
+        currentTickets=totalTickets;
         running=true;
         System.out.println("System started");
 
@@ -151,7 +152,7 @@ public class TicketPool {
             wait();
         }
         currentTickets += tickets;
-        logTransactions(" Added "+ tickets + " tickets ");
+        logTransactions(" Added "+ tickets + " tickets " + "Current Tickets: " + currentTickets);
         if (currentTickets > maxTicketCapacity) {
             stopSystem();
         }
@@ -166,7 +167,7 @@ public class TicketPool {
             wait();
         }
         currentTickets -= tickets;
-        logTransactions(" Removed "+ tickets+ " tickets");
+        logTransactions(" Removed "+ tickets+ " tickets"+ " Current Tickets: " + currentTickets);
         if (currentTickets > maxTicketCapacity) {
             stopSystem();
         }

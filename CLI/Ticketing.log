@@ -162,3 +162,179 @@ Dec 05, 2024 10:47:59 PM TicketPool logTransactions
 INFO: LOG: Removed 1 tickets |currentTickets: 227
 Dec 05, 2024 10:47:59 PM TicketPool logTransactions
 INFO: LOG: Added 20 tickets  |currentTickets: 247
+Dec 06, 2024 10:17:34 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 20 |currentTickets: 20
+Dec 06, 2024 10:17:34 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 19 |currentTickets: 19
+Dec 06, 2024 10:17:34 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 18 |currentTickets: 18
+Dec 06, 2024 10:17:34 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 38 |currentTickets: 38
+Dec 06, 2024 10:17:36 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 37 |currentTickets: 37
+Dec 06, 2024 10:17:36 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 57 |currentTickets: 57
+Dec 06, 2024 10:17:36 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 56 |currentTickets: 56
+Dec 06, 2024 10:17:36 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 76 |currentTickets: 76
+Dec 06, 2024 10:17:37 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 96 |currentTickets: 96
+Dec 06, 2024 10:17:37 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 95 |currentTickets: 95
+Dec 06, 2024 10:17:38 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 115 |currentTickets: 115
+Dec 06, 2024 10:17:38 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 114 |currentTickets: 114
+Dec 06, 2024 10:17:39 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 113 |currentTickets: 113
+Dec 06, 2024 10:17:39 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 133 |currentTickets: 133
+Dec 06, 2024 10:17:40 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 132 |currentTickets: 132
+Dec 06, 2024 10:17:40 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 131 |currentTickets: 131
+Dec 06, 2024 10:17:40 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 151 |currentTickets: 151
+Dec 06, 2024 10:17:40 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 171 |currentTickets: 171
+Dec 06, 2024 10:17:42 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 170 |currentTickets: 170
+Dec 06, 2024 10:17:42 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 190 |currentTickets: 190
+Dec 06, 2024 10:17:42 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 189 |currentTickets: 189
+Dec 06, 2024 10:17:42 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 209 |currentTickets: 209
+Dec 06, 2024 10:20:37 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 20 |currentTickets: 20
+Dec 06, 2024 10:20:37 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 40 |currentTickets: 40
+Dec 06, 2024 10:20:37 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 39 |currentTickets: 39
+Dec 06, 2024 10:20:37 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 38 |currentTickets: 38
+Dec 06, 2024 10:20:39 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 58 |currentTickets: 58
+Dec 06, 2024 10:20:39 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 57 |currentTickets: 57
+Dec 06, 2024 10:20:39 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 56 |currentTickets: 56
+Dec 06, 2024 10:20:39 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 76 |currentTickets: 76
+Dec 06, 2024 10:20:40 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 75 |currentTickets: 75
+Dec 06, 2024 10:20:40 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 95 |currentTickets: 95
+Dec 06, 2024 10:20:41 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 94 |currentTickets: 94
+Dec 06, 2024 10:20:41 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 114 |currentTickets: 114
+Dec 06, 2024 10:20:42 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 134 |currentTickets: 134
+Dec 06, 2024 10:20:42 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 133 |currentTickets: 133
+Dec 06, 2024 10:20:43 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 153 |currentTickets: 153
+Dec 06, 2024 10:20:43 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 152 |currentTickets: 152
+Dec 06, 2024 10:20:43 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 151 |currentTickets: 151
+Dec 06, 2024 10:20:43 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 171 |currentTickets: 171
+Dec 06, 2024 10:20:45 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 170 |currentTickets: 170
+Dec 06, 2024 10:20:45 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 190 |currentTickets: 190
+Dec 06, 2024 10:24:58 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 120 |currentTickets: 120
+Dec 06, 2024 10:24:58 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 119 |currentTickets: 119
+Dec 06, 2024 10:24:58 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 118 |currentTickets: 118
+Dec 06, 2024 10:24:58 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 138 |currentTickets: 138
+Dec 06, 2024 10:25:00 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 158 |currentTickets: 158
+Dec 06, 2024 10:25:00 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 157 |currentTickets: 157
+Dec 06, 2024 10:25:00 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 177 |currentTickets: 177
+Dec 06, 2024 10:25:00 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 176 |currentTickets: 176
+Dec 06, 2024 10:25:01 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 175 |currentTickets: 175
+Dec 06, 2024 10:25:01 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 195 |currentTickets: 195
+Dec 06, 2024 10:25:02 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 215 |currentTickets: 215
+Dec 06, 2024 10:25:02 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 214 |currentTickets: 214
+Dec 06, 2024 10:33:35 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 120 |currentTickets: 120
+Dec 06, 2024 10:33:35 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 119 |currentTickets: 119
+Dec 06, 2024 10:33:35 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 118 |currentTickets: 118
+Dec 06, 2024 10:33:35 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 138 |currentTickets: 138
+Dec 06, 2024 10:33:36 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 158 |currentTickets: 158
+Dec 06, 2024 10:33:36 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 157 |currentTickets: 157
+Dec 06, 2024 10:33:37 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 177 |currentTickets: 177
+Dec 06, 2024 10:33:37 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 176 |currentTickets: 176
+Dec 06, 2024 10:33:38 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 175 |currentTickets: 175
+Dec 06, 2024 10:33:38 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 195 |currentTickets: 195
+Dec 06, 2024 10:33:39 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 215 |currentTickets: 215
+Dec 06, 2024 10:33:39 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 214 |currentTickets: 214
+Dec 06, 2024 10:33:39 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 213 |currentTickets: 213
+Dec 06, 2024 10:33:39 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 233 |currentTickets: 233
+Dec 06, 2024 10:33:41 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 253 |currentTickets: 253
+Dec 06, 2024 10:33:41 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 273 |currentTickets: 273
+Dec 06, 2024 10:33:41 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 272 |currentTickets: 272
+Dec 06, 2024 10:33:41 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 271 |currentTickets: 271
+Dec 06, 2024 10:33:42 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 291 |currentTickets: 291
+Dec 06, 2024 10:33:42 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 290 |currentTickets: 290
+Dec 06, 2024 10:33:43 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 310 |currentTickets: 310
+Dec 06, 2024 10:33:43 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 309 |currentTickets: 309
+Dec 06, 2024 10:33:44 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 308 |currentTickets: 308
+Dec 06, 2024 10:33:44 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 328 |currentTickets: 328
+Dec 06, 2024 10:35:31 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 120 |currentTickets: 120
+Dec 06, 2024 10:35:31 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 119 |currentTickets: 119
+Dec 06, 2024 10:35:31 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 118 |currentTickets: 118
+Dec 06, 2024 10:35:31 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 138 |currentTickets: 138
+Dec 06, 2024 10:35:33 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 137 |currentTickets: 137
+Dec 06, 2024 10:35:33 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 157 |currentTickets: 157
+Dec 06, 2024 10:35:33 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 156 |currentTickets: 156
+Dec 06, 2024 10:35:33 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 176 |currentTickets: 176
+Dec 06, 2024 10:35:34 PM TicketPool logTransactions
+INFO: LOG: Removed 1 tickets Current Tickets: 175 |currentTickets: 175
+Dec 06, 2024 10:35:34 PM TicketPool logTransactions
+INFO: LOG: Added 20 tickets Current Tickets: 195 |currentTickets: 195
