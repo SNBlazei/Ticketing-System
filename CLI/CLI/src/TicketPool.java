@@ -146,34 +146,35 @@ public class TicketPool {
         System.out.println("System stopped");
     }
 
-    public synchronized void addTickets(int tickets) throws InterruptedException {
-        while(currentTickets +tickets> maxTicketCapacity){
-            System.out.println("Maximum number of tickets reached.wait");
-            wait();
+    public synchronized void addTickets(int vendorId, int tickets) throws InterruptedException {
+        while (currentTickets + tickets > maxTicketCapacity) {
+            System.out.println("Maximum number of tickets reached. Vendor " + vendorId + " is waiting...");
+            wait(); // Wait until tickets are consumed
         }
+
+        // Add tickets if there is enough capacity
         currentTickets += tickets;
-        logTransactions(" Added "+ tickets + " tickets " + "Current Tickets: " + currentTickets);
-        if (currentTickets > maxTicketCapacity) {
-            stopSystem();
-        }
-        notifyAll();
+        logTransactions("Vendor " + vendorId + " added " + tickets + " tickets. Current Tickets: " + currentTickets);
+        System.out.println("Vendor " + vendorId + " added " + tickets + " Tickets. Current Tickets: " + currentTickets);
 
+        notifyAll(); // Notify customers and other threads
     }
 
-    public synchronized void removeTickets(int tickets) throws InterruptedException {
 
-        while (currentTickets-tickets< 0){
-            System.out.println("Not enough to remove.Wait ");
-            wait();
+    public synchronized void removeTickets(int customerID, int tickets) throws InterruptedException {
+        while (currentTickets - tickets < 0) {
+            System.out.println("No tickets available. Customer " + customerID + " is waiting...");
+            wait(); // Wait until tickets are added
         }
+
+        // Remove tickets if there are enough
         currentTickets -= tickets;
-        logTransactions(" Removed "+ tickets+ " tickets"+ " Current Tickets: " + currentTickets);
-        if (currentTickets > maxTicketCapacity) {
-            stopSystem();
-        }
-        notifyAll();
+        logTransactions("Customer " + customerID + " purchased " + tickets + " ticket(s). Current Tickets: " + currentTickets);
+        System.out.println("Customer " + customerID + " purchased " + tickets + " Ticket(s). Current Tickets: " + currentTickets);
 
+        notifyAll(); // Notify vendors and other threads
     }
+
     public synchronized void showCurrentTickets(){
         System.out.println("Current tickets: " + getCurrentTickets());
 
