@@ -6092,3 +6092,21 @@ Dec 07, 2024 7:13:52 PM TicketPool logTransactions
 INFO: LOG:Customer1purchased 1 ticket(s). Current Tickets: 982 |currentTickets: 982
 Dec 07, 2024 7:13:53 PM TicketPool logTransactions
 INFO: LOG:Customer2purchased 1 ticket(s). Current Tickets: 981 |currentTickets: 981
+Dec 07, 2024 7:13:53 PM TicketPool logTransactions
+INFO: LOG:Customer1purchased 1 ticket(s). Current Tickets: 980 |currentTickets: 980
+Dec 07, 2024 7:13:53 PM TicketPool logTransactions
+INFO: LOG:Vendor 2 added 20 tickets. Current Tickets: 1000 |currentTickets: 1000
+Dec 07, 2024 7:13:54 PM TicketPool logTransactions
+INFO: LOG:Customer2purchased 1 ticket(s). Current Tickets: 999 |currentTickets: 999
+Dec 07, 2024 7:13:54 PM TicketPool logTransactions
+INFO: LOG:Customer1purchased 1 ticket(s). Current Tickets: 998 |currentTickets: 998
+Dec 07, 2024 7:13:55 PM TicketPool logTransactions
+INFO: LOG:Customer1purchased 1 ticket(s). Current Tickets: 997 |currentTickets: 997
+Dec 07, 2024 7:13:55 PM TicketPool logTransactions
+INFO: LOG:Customer2purchased 1 ticket(s). Current Tickets: 996 |currentTickets: 996
+Dec 07, 2024 7:13:55 PM TicketPool logTransactions
+INFO: LOG:Customer1purchased 1 ticket(s). Current Tickets: 995 |currentTickets: 995
+Dec 07, 2024 7:13:56 PM TicketPool logTransactions
+INFO: LOG:Customer2purchased 1 ticket(s). Current Tickets: 994 |currentTickets: 994
+Dec 07, 2024 7:13:56 PM TicketPool logTransactions
+INFO: LOG:Customer1purchased 1 ticket(s). Current Tickets: 993 |currentTickets: 993
