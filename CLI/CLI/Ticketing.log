@@ -452,3 +452,61 @@ Dec 07, 2024 7:12:19 PM TicketPool logTransactions
 INFO: LOG:Vendor 1 added 20 tickets. Current Tickets: 252 |currentTickets: 252
 Dec 07, 2024 7:12:19 PM TicketPool logTransactions
 INFO: LOG:Customer 1 purchased 1 ticket(s). Current Tickets: 251 |currentTickets: 251
+Dec 08, 2024 12:29:10 PM TicketPool logTransactions
+INFO: LOG:Vendor 1 added 20 tickets. Current Tickets: 120 |currentTickets: 120
+Dec 08, 2024 12:29:10 PM TicketPool logTransactions
+INFO: LOG:Customer 2 purchased 1 ticket(s). Current Tickets: 119 |currentTickets: 119
+Dec 08, 2024 12:29:10 PM TicketPool logTransactions
+INFO: LOG:Customer 1 purchased 1 ticket(s). Current Tickets: 118 |currentTickets: 118
+Dec 08, 2024 12:29:10 PM TicketPool logTransactions
+INFO: LOG:Vendor 2 added 20 tickets. Current Tickets: 138 |currentTickets: 138
+Dec 08, 2024 12:29:11 PM TicketPool logTransactions
+INFO: LOG:Customer 1 purchased 1 ticket(s). Current Tickets: 137 |currentTickets: 137
+Dec 08, 2024 12:29:11 PM TicketPool logTransactions
+INFO: LOG:Vendor 2 added 20 tickets. Current Tickets: 157 |currentTickets: 157
+Dec 08, 2024 12:29:12 PM TicketPool logTransactions
+INFO: LOG:Vendor 1 added 20 tickets. Current Tickets: 177 |currentTickets: 177
+Dec 08, 2024 12:29:12 PM TicketPool logTransactions
+INFO: LOG:Customer 2 purchased 1 ticket(s). Current Tickets: 176 |currentTickets: 176
+Dec 08, 2024 12:29:13 PM TicketPool logTransactions
+INFO: LOG:Customer 1 purchased 1 ticket(s). Current Tickets: 175 |currentTickets: 175
+Dec 08, 2024 12:29:13 PM TicketPool logTransactions
+INFO: LOG:Vendor 2 added 20 tickets. Current Tickets: 195 |currentTickets: 195
+Dec 08, 2024 12:29:14 PM TicketPool logTransactions
+INFO: LOG:Customer 2 purchased 1 ticket(s). Current Tickets: 194 |currentTickets: 194
+Dec 08, 2024 12:29:14 PM TicketPool logTransactions
+INFO: LOG:Customer 1 purchased 1 ticket(s). Current Tickets: 193 |currentTickets: 193
+Dec 08, 2024 12:29:16 PM TicketPool logTransactions
+INFO: LOG:Customer 2 purchased 1 ticket(s). Current Tickets: 192 |currentTickets: 192
+Dec 08, 2024 12:29:16 PM TicketPool logTransactions
+INFO: LOG:Customer 1 purchased 1 ticket(s). Current Tickets: 191 |currentTickets: 191
+Dec 08, 2024 12:29:18 PM TicketPool logTransactions
+INFO: LOG:Customer 1 purchased 1 ticket(s). Current Tickets: 190 |currentTickets: 190
+Dec 08, 2024 12:29:18 PM TicketPool logTransactions
+INFO: LOG:Customer 2 purchased 1 ticket(s). Current Tickets: 189 |currentTickets: 189
+Dec 08, 2024 12:29:19 PM TicketPool logTransactions
+INFO: LOG:Customer 1 purchased 1 ticket(s). Current Tickets: 188 |currentTickets: 188
+Dec 08, 2024 12:29:20 PM TicketPool logTransactions
+INFO: LOG:Customer 2 purchased 1 ticket(s). Current Tickets: 187 |currentTickets: 187
+Dec 08, 2024 12:29:21 PM TicketPool logTransactions
+INFO: LOG:Customer 1 purchased 1 ticket(s). Current Tickets: 186 |currentTickets: 186
+Dec 08, 2024 12:30:29 PM TicketPool logTransactions
+INFO: LOG:Vendor 1 added 20 tickets. Current Tickets: 120 |currentTickets: 120
+Dec 08, 2024 12:30:29 PM TicketPool logTransactions
+INFO: LOG:Customer 2 purchased 1 ticket(s). Current Tickets: 119 |currentTickets: 119
+Dec 08, 2024 12:30:29 PM TicketPool logTransactions
+INFO: LOG:Customer 1 purchased 1 ticket(s). Current Tickets: 118 |currentTickets: 118
+Dec 08, 2024 12:30:29 PM TicketPool logTransactions
+INFO: LOG:Vendor 2 added 20 tickets. Current Tickets: 138 |currentTickets: 138
+Dec 08, 2024 12:30:30 PM TicketPool logTransactions
+INFO: LOG:Customer 1 purchased 1 ticket(s). Current Tickets: 137 |currentTickets: 137
+Dec 08, 2024 12:30:30 PM TicketPool logTransactions
+INFO: LOG:Vendor 2 added 20 tickets. Current Tickets: 157 |currentTickets: 157
+Dec 08, 2024 12:30:31 PM TicketPool logTransactions
+INFO: LOG:Vendor 1 added 20 tickets. Current Tickets: 177 |currentTickets: 177
+Dec 08, 2024 12:30:31 PM TicketPool logTransactions
+INFO: LOG:Customer 2 purchased 1 ticket(s). Current Tickets: 176 |currentTickets: 176
+Dec 08, 2024 12:30:32 PM TicketPool logTransactions
+INFO: LOG:Customer 1 purchased 1 ticket(s). Current Tickets: 175 |currentTickets: 175
+Dec 08, 2024 12:30:32 PM TicketPool logTransactions
+INFO: LOG:Vendor 2 added 20 tickets. Current Tickets: 195 |currentTickets: 195

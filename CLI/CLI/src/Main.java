@@ -7,7 +7,9 @@ public class Main {
 
 
         Scanner scanner = new Scanner(System.in);
+        // Initialize the TicketPool
         TicketPool ticketPool=new TicketPool(0,0,0,0,0);
+        // Call the configure method to gather system parameters
         ticketPool.configure(scanner);
         Configuration configuration=new Configuration(
                 ticketPool.getTotalTickets(),
@@ -22,6 +24,7 @@ public class Main {
 
         System.out.println("Enter the file name (.txt)");
         String fileName = scanner.next();
+        //Save the configuration
         configuration.saveFile(fileName);
 
 
@@ -34,7 +37,7 @@ public class Main {
 
         while (true){
             System.out.println("Enter order (1:Start,2:Stop):");
-
+            // Check if the input is an integer
             if(scanner.hasNextInt()) {
                 int order = scanner.nextInt();
                 scanner.nextLine();
@@ -42,6 +45,7 @@ public class Main {
                 switch (order) {
                     case 1:
                         ticketPool.startSystem();
+                        // List to hold vendor and customer threads
                         List<Thread> threads=new ArrayList<>();
                         Thread vendorThread1=new Thread(new Vendor(1,20,2000, ticketPool));
                         Thread vendorThread2=new Thread(new Vendor(2,20,1500, ticketPool));

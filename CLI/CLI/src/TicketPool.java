@@ -88,11 +88,11 @@ public class TicketPool {
         }
 
         while (true){
-            System.out.println("Enter the customer retrieval rate (400-1500)");
+            System.out.println("Enter the customer retrieval rate (1-30)");
             if(scanner.hasNextInt()) {
                 customerRetrievalRate = scanner.nextInt();
 
-                if (customerRetrievalRate >= 400 && customerRetrievalRate <= 1500) {
+                if (customerRetrievalRate >= 1 && customerRetrievalRate <= 30) {
                     break;
                 }else {
                     System.out.println("value must be between 400 and 1500");
